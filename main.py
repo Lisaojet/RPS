@@ -19,41 +19,41 @@ while True:
         player = input("rock, paper, or scissors?: ").lower()
 
     if player == computer:
-        print(f"\Player {(player)}, vs CPU {(computer)}.")
+        print(f"Player ({player}), vs CPU ({computer})")
         print("It is a tie! Play again!")
 
     elif player == "rock":
         if computer == "paper":
-            print(f"\Player {(player)}, vs CPU {(computer)}.")
+            print(f"Player ({player}), vs CPU ({computer})")
             print("Paper beats Rock")
             print("Oops! You lose!1")
             break
         if computer == "scissors":
-            print(f"\Player {(player)}, vs CPU {(computer)}.")
+            print(f"Player ({player}), vs CPU ({computer})")
             print("Rock beats Scissors")
             print("Congratulations! You win!")
             break
 
     elif player == "scissors":
         if computer == "rock":
-            print(f"\Player {(player)}, vs CPU {(computer)}.")
+            print(f"Player ({player}), vs CPU ({computer})")
             print("Rock beats Scissors")
             print("Oops! You lose!")
             break
         if computer == "paper":
-            print(f"\Player {(player)}, vs CPU {(computer)}.")
+            print(f"Player ({player}), vs CPU ({computer})")
             print("Scissors beats Paper")
             print("Congratulations! You win!")
             break
 
     elif player == "paper":
         if computer == "scissors":
-            print(f"\Player {(player)}, vs CPU {(computer)}.")
+            print(f"Player ({player}), vs CPU ({computer})")
             print("Scissors beats Paper")
             print("Oops! You lose!")
             break
         if computer == "rock":
-            print(f"\Player {(player)}, vs CPU {(computer)}.")
+            print(f"Player ({player}), vs CPU ({computer})")
             print("Paper beats Rock")
             print("Congratulations! You win!")
             break
