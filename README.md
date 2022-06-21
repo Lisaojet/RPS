@@ -1,2 +1,2 @@
 # RPS
-Game
+This is Rock Paper Scissors Game Assignment.
