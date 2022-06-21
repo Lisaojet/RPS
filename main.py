@@ -1,67 +1,70 @@
 
 import random
 
-input("Welcome to Rock-Paper-Scisssors Game! Press enter to continue")
+input("Welcome to Rock-Paper-Scisssors Game! \n" 
+      "Press enter to continue")
 print()
 print("The rules of the game is as follows: \n"
       "Rock beats Scissors \n"
       "Paper beats Rock \n"
       "Scissors beats Paper \n")
 
+options_list = ["R", "P", "S"]
+options_dict = {"R": "Rock", "P": "Paper", "S": "Scissors"}
 
 while True:
-    possible_options = ["rock", "paper", "scissors"]
+    possible_options = ["R", "P", "S"]
 
-    computer = random.choice(possible_options)
+    computer = random.choice(options_list)
     player = None
 
-    while player not in possible_options:
-        player = input("rock, paper, or scissors?: ").lower()
+    while player not in options_list:
+        player = input("Enter R for Rock, P for Paper, or S for Scissors?: ").upper()
 
     if player == computer:
-        print(f"Player ({player}), vs CPU ({computer})")
+        print(f"Player ({options_dict[player]}) vs CPU ({options_dict[computer]})")
         print("It is a tie! Play again!")
+        continue
 
-    elif player == "rock":
-        if computer == "paper":
-            print(f"Player ({player}), vs CPU ({computer})")
+    elif player == "R":
+        if computer == "P":
+            print(f"Player ({options_dict[player]}) vs CPU ({options_dict[computer]})")
             print("Paper beats Rock")
-            print("Oops! You lose!1")
+            print("Oops! You lose!")
             break
-        if computer == "scissors":
-            print(f"Player ({player}), vs CPU ({computer})")
+        if computer == "S":
+            print(f"Player ({options_dict[player]}) vs CPU ({options_dict[computer]})")
             print("Rock beats Scissors")
             print("Congratulations! You win!")
             break
 
-    elif player == "scissors":
-        if computer == "rock":
-            print(f"Player ({player}), vs CPU ({computer})")
+    elif player == "S":
+        if computer == "R":
+            print(f"Player ({options_dict[player]}) vs CPU ({options_dict[computer]})")
             print("Rock beats Scissors")
             print("Oops! You lose!")
             break
-        if computer == "paper":
-            print(f"Player ({player}), vs CPU ({computer})")
+        if computer == "P":
+            print(f"Player ({options_dict[player]}) vs CPU ({options_dict[computer]})")
             print("Scissors beats Paper")
             print("Congratulations! You win!")
             break
 
-    elif player == "paper":
-        if computer == "scissors":
-            print(f"Player ({player}), vs CPU ({computer})")
+    elif player == "P":
+        if computer == "S":
+            print(f"Player ({options_dict[player]}) vs CPU ({options_dict[computer]})")
             print("Scissors beats Paper")
             print("Oops! You lose!")
             break
-        if computer == "rock":
-            print(f"Player ({player}), vs CPU ({computer})")
+        if computer == "R":
+            print(f"Player ({options_dict[player]}) vs CPU ({options_dict[computer]})")
             print("Paper beats Rock")
             print("Congratulations! You win!")
             break
 
-    play_again = input("Play again? (yes/no): ").lower()
-
-    if play_again != "yes":
-        break
+    else:
+          print("\nInvalid input! Please try again.")
+          continue
 
 print("Bye!")
 
